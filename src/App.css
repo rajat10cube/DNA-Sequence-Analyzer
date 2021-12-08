@@ -1,5 +1,5 @@
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 .product-title {
@@ -8,22 +8,26 @@ h1 {
 }
 
 .product-id {
-  font-size: .8em;
+  font-size: 0.8em;
   margin: 1em 0;
 }
 
 .product-edit-icon {
-  opacity: .7;
+  opacity: 0.7;
   position: absolute;
   right: 2.3rem;
-  top: .4rem;
+  top: 0.4rem;
 }
 
 .product-edit-icon:hover {
   opacity: 1;
 }
 
-.navbar, .navbar-end, .navbar-menu, .navbar-start {
+.navbar,
+.navbar-end,
+.navbar-mid,
+.navbar-menu,
+.navbar-start {
   align-items: stretch !important;
   display: flex !important;
 }
@@ -44,6 +48,12 @@ h1 {
   margin-left: auto !important;
 }
 
+.navbar-mid {
+  display: flex !important;
+  justify-content: center !important;
+  margin-left: auto !important;
+}
+
 .features {
   padding-bottom: 3em;
 }
@@ -51,7 +61,6 @@ h1 {
 body {
   visibility: visible !important;
 }
-
 
 .auth form {
   margin-top: 1em;

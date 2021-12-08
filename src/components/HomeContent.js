@@ -8,9 +8,9 @@ export default function HomeContent() {
                 <div className="card is-shady">
                     <div className="card-content">
                         <div className="content">
-                            <h4>Energy conservation</h4>
-                            <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                            <p><a href="/">Learn more</a></p>
+                            <h4>Get your test results</h4>
+                            <p>No need of going to hospitals when you are sick as the hospital comes to you</p>
+                            <center><img src="test-results@3x.png" alt="test-result" width="200"></img></center>
                         </div>
                     </div>
                 </div>
@@ -19,10 +19,9 @@ export default function HomeContent() {
                 <div className="card is-shady">
                     <div className="card-content">
                         <div className="content">
-                            <h4>Water conservation</h4>
-                            <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
-                            sed risus.</p>
-                            <p><a href="/">Learn more</a></p>
+                            <h4>Fast and accurate Lab Report</h4>
+                            <p>Get your accurate lab reports and results faster than usual sitting at your home</p>
+                            <center><img src="corona-test-report.png" alt="test-report" width="200"></img></center>
                         </div>
                     </div>
                 </div>
@@ -31,9 +30,9 @@ export default function HomeContent() {
                 <div className="card is-shady">
                      <div className="card-content">
                         <div className="content">
-                            <h4>Solar energy</h4>
-                            <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                            <p><a href="/">Learn more</a></p>
+                            <h4>Send your DNA sample</h4>
+                            <p>Send your DNA sample from your home  at your convinience</p>
+                            <center><img src="home-icon.png" alt="home" width="200"></img></center>
                         </div>
                     </div>
                 </div>
