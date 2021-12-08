@@ -13,6 +13,7 @@ import ChangePassword from './components/auth/ChangePassword';
 import ChangePasswordConfirm from './components/auth/ChangePasswordConfirm';
 import Welcome from './components/auth/Welcome';
 import Footer from './components/Footer';
+import { Auth } from 'aws-amplify';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 library.add(faEdit);
@@ -21,6 +22,7 @@ class App extends Component {
 
   state={
     isAuthenticated: false,
+    isAuthenticating: true,
     user: null
   }
 
@@ -31,6 +33,19 @@ class App extends Component {
     this.setState({ user: user })
   }
 
+  async componentDidMount(){
+    try{
+      const session = await Auth.currentSession();
+      this.setAuthStatus(true);
+      console.log(session);
+      const user = await Auth.currentAuthenticatedUser();
+      this.setUser(user);
+    }catch(error){
+      console.log(error);
+    }
+    this.setState({isAuthenticating:false});
+  }
+
   render() {
     const authProps= {
       isAuthenticated: this.state.isAuthenticated,
@@ -39,6 +54,7 @@ class App extends Component {
       setUser: this.setUser
     }
     return (
+      !this.state.isAuthenticating &&
       <div className="App">
         <Router>
           <div>

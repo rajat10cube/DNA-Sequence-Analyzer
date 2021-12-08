@@ -54,7 +54,7 @@ export default class Navbar extends Component {
                   </div>
                 )}
                 {this.props.auth.isAuthenticated && (
-                <a href="/login" onClick="handleLogOut" className="button is-primary">
+                <a href="/login" onClick={this.handleLogOut} className="button is-primary">
                   Log out
                 </a>
                 )}
