@@ -12,6 +12,11 @@ import ForgotPasswordVerification from './components/auth/ForgotPasswordVerifica
 import ChangePassword from './components/auth/ChangePassword';
 import ChangePasswordConfirm from './components/auth/ChangePasswordConfirm';
 import Welcome from './components/auth/Welcome';
+
+import SendReport from './components/SendReport';
+import ListPatients from './components/ListPatients';
+import ListUsers from './components/ListUsers';
+
 import Footer from './components/Footer';
 import { Auth } from 'aws-amplify';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -61,6 +66,9 @@ class App extends Component {
             <Navbar auth={authProps}/>
             <Switch>
               <Route exact path="/" render={(props)=><Home {...props} auth={authProps}/>} />
+              <Route exact path="/sendreport" render={(props)=><SendReport {...props} auth={authProps}/>} />
+              <Route exact path="/listpatients" render={(props)=><ListPatients {...props} auth={authProps}/>} />
+              <Route exact path="/listusers" render={(props)=><ListUsers {...props} auth={authProps}/>} />
               <Route exact path="/products" render={(props)=><Products {...props} auth={authProps}/>} />
               <Route exact path="/admin" render={(props)=><ProductAdmin {...props} auth={authProps}/>} />
               <Route exact path="/login" render={(props)=><LogIn {...props} auth={authProps}/>} />

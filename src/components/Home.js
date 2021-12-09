@@ -1,18 +1,23 @@
 import React, { Fragment } from 'react';
 import Hero from './Hero';
 import HomeContent from './HomeContent';
+import LabContent from './LabContent';
 
-export default function Home() {
+export default function Home(props) {
   return (
     <Fragment>
-      <Hero />
+      {props.auth.isAuthenticated && (
+        <LabContent/>
+      )}
+      {!props.auth.isAuthenticated && (
+        <div>
+      <Hero auth={props.auth} />
       <div className="box cta">
-        <p className="has-text-centered">
-          {/* <span className="tag is-primary">New</span> */}
-          DNA sample collection, and report delivery mechanism
-        </p>
+          <center><img src="ForwardHealthTech.png" width="400"/></center>
+          <center><h3>Scan the above QR code to send message from whatsapp</h3></center>
       </div>
       <HomeContent />
+      </div>)}
     </Fragment>
   )
 }

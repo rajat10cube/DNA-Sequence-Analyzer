@@ -1,7 +1,13 @@
 h1 {
   font-size: 2.5em;
 }
-
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.qrcontainer {
+  margin-top: 4em;
+}
 .product-title {
   font-weight: bold;
   font-size: 1.2em;
