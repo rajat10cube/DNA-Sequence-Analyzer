@@ -32,7 +32,7 @@ export default function HomeContent() {
                         <div className="content">
                             <center><img src="doctor.png" alt="home" width="200"></img></center>
                             <center className="qrcontainer"><a href="/listusers" className="button is-primary">List Lab Assistants</a></center>
-                            <center><p>List all the lab assistants registered with our service</p></center>
+                            <center><p>List all lab assistants registered with our service</p></center>
                         </div>
                     </div>
                 </div>
