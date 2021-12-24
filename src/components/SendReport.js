@@ -174,7 +174,7 @@ export default function SendReports() {
                 <div className="card-content">
                   <div className="content">
 
-                    <center><img src="fasta.jpeg" alt="test-result" width="300"></img></center>
+                    <center><img src="fasta.jpg" alt="test-result" width="300"></img></center>
                     <center className="qrcontainer"><button className="button is-primary" type="submit" value="Submit" onClick={handleSubmission}>Upload Fasta File and Generate Report</button></center>
                   </div>
                 </div>
