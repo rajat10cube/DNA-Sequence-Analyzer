@@ -88,7 +88,7 @@ export default function SendReports() {
       }
     }).then((response) => {
       console.log("parameter", selectedData.phone)
-      console.log(response);
+      console.log("res", response);
       var oneSecond = 1000;
       var tenSecond = oneSecond * 10;
       if (response.status == 200) {
