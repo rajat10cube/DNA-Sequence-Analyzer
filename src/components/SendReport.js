@@ -15,7 +15,7 @@ export default function SendReports() {
   const [selectedFile, setSelectedFile] = useState();
   const [uploadSuccess, setUploadSuccess] = useState(null);
   const [isSelected, setIsFilePicked] = useState(false);
-
+  const [upload2Success, setUpload2Success] = useState(null);
 
 
 
@@ -89,8 +89,14 @@ export default function SendReports() {
     }).then((response) => {
       console.log("parameter", selectedData.phone)
       console.log(response);
+      var oneSecond = 1000;
+      var tenSecond = oneSecond * 10;
       if (response.status == 200) {
-        setUploadSuccess("File Uploaded Successfully")
+        setTimeout(function () {
+          setUploadSuccess(<h4>DNA Sequencing Report Generated Successfully</h4>)
+        }, tenSecond);
+
+        setUploadSuccess(<div className='loader' id='target'></div>)
       }
     });
 
@@ -107,11 +113,9 @@ export default function SendReports() {
     console.log("mobilenoooo", selectedData)
 
     axios.post(`https://145gkmq34e.execute-api.us-east-1.amazonaws.com/prod/sendreporttowauser`, ph, { headers: headers2 }).then((response2) => {
-      console.log(response2);
+      console.log("21234567", response2)
+      alert("Hello! I am an alert box!!");
     });
-    console.log("mobilenoooo2", selectedData)
-
-
   };
 
   const handleSubmission2 = (e) => {
@@ -123,10 +127,9 @@ export default function SendReports() {
     // };
     var mobile = selectedMobile
     axios.post(`https://145gkmq34e.execute-api.us-east-1.amazonaws.com/prod/sendreporttowauser`, mobile).then((response2) => {
-
       console.log("asdfghjklkjhgfdsasdfghjkl", response2);
+      alert("Hello! I am an alert box!!");
     });
-    console.log("mobilenoooo2", selectedMobile)
   };
 
   // const fileUploadHandler = () => {
@@ -143,64 +146,36 @@ export default function SendReports() {
 
     <div>
       <Container>
-        <h1>Choose Patient : </h1>
-        {/* <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
-            Select the Patient
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-      {fetchedData.map(item=>(  
-          <Dropdown.Item href="#/action-1">{item["firstname"]}</Dropdown.Item>
-          ))}
-          </Dropdown.Menu>
-        </Dropdown>
-        <br/>
-        <br/> */}
-        {/* <form onSubmit={handleSubmit}>
-        <select name="firstname" onChange={handleChange}>
-        {fetchedData.map(item=>(  
-          <option value={item["mobile"]}>{item["firstname"]}</option>
-          ))}
-        </select>
-        <div>
-			<input type="file" name="file" onChange={changeHandler} />
-			{isSelected ? (
-				<div>
-					<p>Filename: {selectedFile.name}</p>
-				</div>
-			) : (
-				<p>Select a file to show details</p>
-			)}
-		  </div>
-        </form> */}
-
         <section className="container qrcontainer">
           <div className="columns features">
             <form onSubmit={handleSubmit} width="100px">
+              <h3>Choose Patient : </h3>
               <select name="firstname" onChange={handleChange}>
                 {fetchedData.map(item => (
-                  <option value={item["mobile"]}>{item["firstname"]}</option>
+                  <option value={item["mobile"]}>{item["firstname"] + " " + item["lastname"]}</option>
                 ))}
               </select>
               <div>
-                <input type="file" name="file" onChange={changeHandler} />
+                <input style={{ marginTop: 2 + 'vw' }} type="file" name="file" onChange={changeHandler} />
                 {isSelected ? (
                   <div>
                     <p>Filename: {selectedFile.name}</p>
                   </div>
                 ) : (
-                  <p>Select a file to show details</p>
+                  <p style={{ marginTop: 2 + 'vw' }}>Select a file to show details</p>
                 )}
+                {uploadSuccess}
+                {upload2Success}
               </div>
             </form>
-            <p>{uploadSuccess}</p>
+
             <div className="column is-4">
               <div className="card is-shady">
                 <div className="card-content">
                   <div className="content">
 
                     <center><img src="fasta.jpeg" alt="test-result" width="300"></img></center>
-                    <center className="qrcontainer"><button type="submit" value="Submit" onClick={handleSubmission}>Upload Fasta File</button></center>
+                    <center className="qrcontainer"><button className="button is-primary" type="submit" value="Submit" onClick={handleSubmission}>Upload Fasta File and Generate Report</button></center>
                   </div>
                 </div>
               </div>
@@ -210,7 +185,7 @@ export default function SendReports() {
                 <div className="card-content">
                   <div className="content">
                     <center><img src="report.png" alt="test-report" width="400"></img></center>
-                    <center className="qrcontainer"><button ype="submit" value="Submit" onClick={handleSubmission2}>Generate Report</button></center>
+                    <center className="qrcontainer"><button className="button is-primary" ype="submit" value="Submit" onClick={handleSubmission2}>Send Report on Whatsapp</button></center>
                   </div>
                 </div>
               </div>
