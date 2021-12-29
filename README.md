@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Forward-Health-Tech-System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Prototype :
+https://marvelapp.com/prototype/d1fb80i/screen/83296921
 
-## Available Scripts
+## Architecture Diagram
+![Architecture](Architecture/Forward_Health_Tech_Systems-Architecture.png)
 
-In the project directory, you can run:
+### Project Description: 
+The project deals with solving the global pandemic using Cloud-based services like S3, Lex chatbot, Sagemaker, Lambda, API gateway, Cognito, AWS Web, ECS for containerization. The facility will be provided to the patient at the comfort of their home. The idea is to provide appointment booking, DNA sample collection, and a report delivery mechanism to the end-user. There will be various stakeholders using this application. They are as follows, the Patient User, the DNA sample Lab user, the Sample collector, and the Doctors or Government Department to whom the positive reports will be sent.
+Patient users will be able to interact with the chatbot, they will converse with it about any symptoms or ailments they are encountering which can be hazardous, they can also book their sample collection appointment using a chatbot. A sample collector personnel will be assigned to the address of the user, upon successful collection, the sample will be sent to our lab dashboard user, where the DNA genome sequence pattern recognition algorithm - https://doi.org/10.1007/s13369-021-05811-4 will be deployed to perform analysis on the collected sample data. And the lab can use the collected data to provide the findings to the patient-user using email and SMS services as a pdf file. If the reports are found similar to any COVID-19 variant, the patient will be informed and it will be sent to the government health care department as well so that a disease-specific line of action for the treatment can be facilitated.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Motivation: 
+Many professions, including medicine, have been substantially impacted by the development of mobile computing devices. Health care providers now use smartphone or tablet computers to perform tasks that formerly required a pager, cellphone, or PDA. Mobile device models offer more complex functionality, such as web searching, global positioning systems (GPS), high-quality cameras, and sound recording, in addition to speech and text.
+We are using these features to facilitate sample collection and report delivery tasks to each and every point of contact in the healthcare industry system and to the patients with limited access to quality health care.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+### Product features:
+Replicating the conventional mobile app functionality via Messaging apps like WhatsApp, Telegram.
+We will be using AWS functionalities like - S3 for web hosting, Lex service for COVID-19 based chatbot, Sagemaker for ML-based model deployment and training, Lambda for writing python script, API gateway for creating web-based APIs, Cognito for Login-Signup functionality, AWS Web sockets for live chat, ECS for containerization.
+SMS and email services will be deployed for the pdf report delivery using Twilio.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Data Sources: 
+NCBI web database - https://www.ncbi.nlm.nih.gov/ 
