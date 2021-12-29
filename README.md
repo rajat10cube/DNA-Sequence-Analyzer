@@ -4,11 +4,11 @@
 https://marvelapp.com/prototype/d1fb80i/screen/83296921
 
 ## Architecture Diagram
-![Architecture](Architecture/Forward_Health_Tech_Systems-Architecture.png)
+![Forward HealthTech](https://github.com/rajat10cube/cloud-frontend/blob/main/Cloud%20Project%20Architecture%20(2).png)
 
 ### Project Description: 
 The project deals with solving the global pandemic using Cloud-based services like S3, Lex chatbot, Sagemaker, Lambda, API gateway, Cognito, AWS Web, ECS for containerization. The facility will be provided to the patient at the comfort of their home. The idea is to provide appointment booking, DNA sample collection, and a report delivery mechanism to the end-user. There will be various stakeholders using this application. They are as follows, the Patient User, the DNA sample Lab user, the Sample collector, and the Doctors or Government Department to whom the positive reports will be sent.
-Patient users will be able to interact with the chatbot, they will converse with it about any symptoms or ailments they are encountering which can be hazardous, they can also book their sample collection appointment using a chatbot. A sample collector personnel will be assigned to the address of the user, upon successful collection, the sample will be sent to our lab dashboard user, where the DNA genome sequence pattern recognition algorithm - https://doi.org/10.1007/s13369-021-05811-4 will be deployed to perform analysis on the collected sample data. And the lab can use the collected data to provide the findings to the patient-user using email and SMS services as a pdf file. If the reports are found similar to any COVID-19 variant, the patient will be informed and it will be sent to the government health care department as well so that a disease-specific line of action for the treatment can be facilitated.
+Patient users will be able to interact with the chatbot, they will converse with it about any symptoms or ailments they are encountering which can be hazardous, they can also book their sample collection appointment using a chatbot. A sample collector personnel will be assigned to the address of the user, upon successful collection, the sample will be sent to our lab dashboard user, where the DNA genome sequence pattern recognition algorithm will be deployed to perform analysis on the collected sample data. And the lab can use the collected data to provide the findings to the patient-user using email and SMS services as a pdf file. If the reports are found similar to any COVID-19 variant, the patient will be informed and it will be sent to the government health care department as well so that a disease-specific line of action for the treatment can be facilitated.
 
 
 ### Motivation: 
